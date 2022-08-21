@@ -1,0 +1,10 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "emmet.triggerExpansionOnTab": true
+}
