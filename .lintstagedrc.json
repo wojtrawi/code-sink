@@ -1,5 +1,5 @@
 {
-  "*.{js,ts,html}": ["eslint --fix", "npm run format:write --"],
-  "*.{css,scss}": "npm run format:write --",
-  "*.{json,md}": "npm run format:write --"
+  "*.{js,ts,html}": ["eslint --fix", "prettier --write"],
+  "*.{css,scss}": ["stylelint --fix", "prettier --write"],
+  "*.{json,md}": ["prettier --write"]
 }

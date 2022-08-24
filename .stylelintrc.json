@@ -1,0 +1,7 @@
+{
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-prettier"],
+  "rules": {
+    "color-named": "never",
+    "scss/double-slash-comment-empty-line-before": "always"
+  }
+}
