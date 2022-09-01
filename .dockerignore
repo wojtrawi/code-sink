@@ -1,0 +1,9 @@
+.git
+.gitignore
+dist
+node_modules
+.angular
+.vscode
+.husky
+Dockerfile
+README.md
