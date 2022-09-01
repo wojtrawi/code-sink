@@ -6,15 +6,17 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "prepare": "husky install",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "format:stylelint-conflicts": "stylelint-config-prettier-check",
     "lint:ng": "ng lint",
-    "lint:ng:fix": "ng lint --fix",
+    "lint:ng:ci": "npm run lint:ng -- -c ci",
+    "lint:ng:fix": "npm run lint:ng -- -c fix",
     "lint:styles": "stylelint \"src/**/*.{css,scss}\"",
-    "lint:styles:fix": "stylelint \"src/**/*.{css,scss}\" --fix"
+    "lint:styles:fix": "npm run lint:styles -- --fix",
+    "test": "ng test",
+    "test:ci": "npm run test -- -c ci"
   },
   "private": true,
   "dependencies": {

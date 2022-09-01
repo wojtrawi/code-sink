@@ -19,7 +19,7 @@ RUN npm run format:check
 
 # Lint ng code
 FROM base as lint-ng
-RUN npm run lint:ng
+RUN npm run lint:ng:ci
 
 # Lint styles code
 FROM base as lint-styles
@@ -27,7 +27,7 @@ RUN npm run lint:styles
 
 # Test ng code
 FROM base as test-ng
-RUN node -v
+RUN npm run test:ci
 
 # Build app
 FROM base as build-app

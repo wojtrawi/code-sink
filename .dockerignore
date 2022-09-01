@@ -1,5 +1,6 @@
 .git
 .gitignore
+coverage
 dist
 node_modules
 .angular

@@ -89,12 +89,28 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": []
+          },
+          "configurations": {
+            "ci": {
+              "browsers": "ChromeHeadlessCI",
+              "progress": false,
+              "watch": false,
+              "codeCoverage": true
+            }
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          },
+          "configurations": {
+            "fix": {
+              "fix": true
+            },
+            "ci": {
+              "quiet": true
+            }
           }
         }
       }
