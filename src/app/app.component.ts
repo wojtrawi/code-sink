@@ -8,7 +8,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class AppComponent {
   title = 'code-sink';
 
-  noop() {
-    console.log('xxx');
+  get cookies() {
+    return document.cookie;
+  }
+
+  setCookie() {
+    document.cookie = 'user=Wojtek; max-age=3600';
   }
 }

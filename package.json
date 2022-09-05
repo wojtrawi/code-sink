@@ -16,7 +16,8 @@
     "lint:styles": "stylelint \"src/**/*.{css,scss}\"",
     "lint:styles:fix": "npm run lint:styles -- --fix",
     "test": "ng test",
-    "test:ci": "npm run test -- -c ci"
+    "test:ci": "npm run test -- -c ci",
+    "lh": "lhci autorun"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     "@angular/compiler-cli": "^14.1.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@lhci/cli": "^0.9.0",
     "@types/jasmine": "~4.0.0",
     "@typescript-eslint/eslint-plugin": "5.29.0",
     "@typescript-eslint/parser": "5.29.0",
@@ -58,6 +60,7 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1",
+    "puppeteer": "^16.2.0",
     "stylelint": "^14.11.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^5.0.0",
