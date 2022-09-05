@@ -88,14 +88,15 @@
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "codeCoverage": true
           },
           "configurations": {
             "ci": {
               "browsers": "ChromeHeadlessCI",
               "progress": false,
               "watch": false,
-              "codeCoverage": true
+              "reporters": ["mocha"]
             }
           }
         },
