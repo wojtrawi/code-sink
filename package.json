@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:local": "npm run build -- --base-href /",
     "watch": "ng build --watch --configuration development",
     "prepare": "husky install",
     "format:check": "prettier --check .",
@@ -17,7 +18,8 @@
     "lint:styles:fix": "npm run lint:styles -- --fix",
     "test": "ng test",
     "test:ci": "npm run test -- -c ci",
-    "lh": "lhci autorun"
+    "lh:local": "lhci autorun --config=./lighthouserc.local.js",
+    "lh:prod": "lhci autorun --config=./lighthouserc.prod.js"
   },
   "private": true,
   "dependencies": {
