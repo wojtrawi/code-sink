@@ -22,6 +22,6 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     console.log('foo');
 
-    expect(app.title).toEqual('code-sink');
+    expect(app.title).toEqual('code-sink rocks!');
   });
 });
