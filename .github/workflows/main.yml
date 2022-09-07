@@ -1,4 +1,4 @@
-name: Code sink CI
+name: Code sink CI/CD
 on:
   push:
   pull_request:
