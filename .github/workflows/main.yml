@@ -49,6 +49,8 @@ jobs:
         if: github.ref_name != 'main'
         run: npm run build:local
       - name: Audit
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: npm run lh:local
   build-for-deploy:
     name: Build app for deploy
@@ -90,4 +92,6 @@ jobs:
         with:
           folder: deploy_dist/code-sink
       - name: Audit
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         run: npm run lh:prod
