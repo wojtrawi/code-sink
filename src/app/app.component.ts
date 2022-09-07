@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
-  title = 'code-sink';
+  title = 'code-sink rocks!';
 
   get cookies() {
     return document.cookie;

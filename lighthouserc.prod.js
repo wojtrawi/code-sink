@@ -18,7 +18,11 @@ module.exports = {
       },
     },
     upload: {
-      target: 'temporary-public-storage',
+      target: {
+        target: 'lhci',
+        serverBaseUrl: 'https://cryptic-tundra-19411.herokuapp.com/',
+        token: 'b64efc14-b6ff-43e8-b015-038ca94d5a5c',
+      },
     },
   },
 };
