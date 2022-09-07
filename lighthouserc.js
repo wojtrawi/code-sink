@@ -1,8 +1,8 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: './dist/code-sink',
-      url: ['http://localhost:4200'],
+      // staticDistDir: './dist/code-sink',
+      url: ['https://wojtrawi.github.io/code-sink'],
       isSinglePageApplication: true,
       numberOfRuns: 3,
       puppeteerScript: 'init-browser.js',
