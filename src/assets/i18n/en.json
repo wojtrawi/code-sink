@@ -1,4 +1,5 @@
 {
-  "HELLO": "Welcome",
-  "GREETING": "Nice to meet you"
+  "ADDITIONAL_INFO": "Missing value for 'ADDITIONAL_INFO'",
+  "GREETING": "Nice to meet you",
+  "HELLO": "Welcome"
 }

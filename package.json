@@ -19,7 +19,9 @@
     "test": "ng test",
     "test:ci": "npm run test -- -c ci",
     "lh:local": "lhci autorun --config=./lighthouserc.local.js",
-    "lh:prod": "lhci autorun --config=./lighthouserc.prod.js"
+    "lh:prod": "lhci autorun --config=./lighthouserc.prod.js",
+    "i18n:extract": "transloco-keys-manager extract",
+    "i18n:find": "transloco-keys-manager find"
   },
   "private": true,
   "dependencies": {
@@ -48,6 +50,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@lhci/cli": "^0.9.0",
+    "@ngneat/transloco-keys-manager": "^3.4.2",
     "@types/jasmine": "~4.0.0",
     "@typescript-eslint/eslint-plugin": "5.29.0",
     "@typescript-eslint/parser": "5.29.0",

@@ -1,5 +1,11 @@
 module.exports = {
-  rootTranslationsPath: 'src/assets/i18n/',
+  rootTranslationsPath: 'assets/i18n/',
   langs: ['en', 'pl', 'fr'],
-  keysManager: {},
+  keysManager: {
+    fileFormat: 'json',
+    sort: true,
+    addMissingKeys: false, // does not seem to work
+    emitErrorOnExtraKeys: true,
+    replace: false,
+  },
 };
