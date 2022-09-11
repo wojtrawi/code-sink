@@ -15,7 +15,7 @@ const TRANSLOCO_CFG: TranslocoConfig = translocoConfig({
     allowEmpty: false,
     useFallbackTranslation: true,
   },
-  reRenderOnLangChange: false,
+  reRenderOnLangChange: true,
   prodMode: environment.production,
 });
 

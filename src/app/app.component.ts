@@ -35,8 +35,6 @@ export class AppComponent {
   changeLocale() {
     const newLocale = this.localeId === 'pl' ? 'en' : 'pl';
     this.i18nService.changeLang(newLocale);
-    // this.i18nService.changeLang(newLocale)?.subscribe(() => {
-    //   this.lang = this.i18nService.getCurrentLang();
-    // });
+    // this.i18nService.changeLang(newLocale)?.subscribe(() => {});
   }
 }
