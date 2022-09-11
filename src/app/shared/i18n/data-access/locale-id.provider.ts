@@ -4,7 +4,7 @@ import { I18nService } from './i18n.service';
 function localeIdFactory() {
   const i18nService = inject(I18nService);
 
-  return i18nService.getCurrentLang();
+  return i18nService.currentLang;
 }
 
 export function provideLocaleId(): FactoryProvider {

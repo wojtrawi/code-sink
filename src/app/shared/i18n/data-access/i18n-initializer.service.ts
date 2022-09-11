@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { TranslocoService, getBrowserLang } from '@ngneat/transloco';
 import { filter, map, merge, Observable, switchMap, tap } from 'rxjs';
 import { AppConfigService } from '../../app-config/data-access';
 import { UserPreferencesService } from '../../user-preferences/data-access';
@@ -17,7 +18,8 @@ export class I18nInitializerService {
 
   constructor(
     private readonly appConfigService: AppConfigService,
-    private readonly userPreferencesService: UserPreferencesService
+    private readonly userPreferencesService: UserPreferencesService,
+    private readonly i18nTranslationService: TranslocoService
   ) {}
 
   public initialize$(
@@ -27,8 +29,7 @@ export class I18nInitializerService {
       map(({ supportedLangs }) => supportedLangs),
       snapshot(),
       tap((supportedLangs) => {
-        // TODO: Call Transloco
-        console.log('setting supportedLangs ', supportedLangs);
+        this.i18nTranslationService.setAvailableLangs(supportedLangs);
       })
     );
 
@@ -40,7 +41,8 @@ export class I18nInitializerService {
   }
 
   private getFallbackAppLang(): AppLang {
-    // TODO: Browser lang -> default one (Transloco)
-    return 'en';
+    // TODO: Check if browser lang is supported
+    return (getBrowserLang() ||
+      this.i18nTranslationService.getDefaultLang()) as AppLang;
   }
 }

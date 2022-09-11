@@ -6,13 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAppConfigInitializer } from './shared/app-config/data-access';
 import {
+  TranslocoRootModule,
   provideI18nInitializer,
   provideLocaleId,
 } from './shared/i18n/data-access';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    TranslocoRootModule,
+  ],
   providers: [
     provideAppConfigInitializer(),
     provideI18nInitializer(),

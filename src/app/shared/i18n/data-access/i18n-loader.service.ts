@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { forkJoin, from, map, Observable, of } from 'rxjs';
+import { Translation, TranslocoService } from '@ngneat/transloco';
+import { forkJoin, from, map, Observable, tap } from 'rxjs';
 import { ScriptLoaderService } from '../../utils';
 import { AppLang } from './i18n.model';
 
@@ -7,7 +8,10 @@ import { AppLang } from './i18n.model';
   providedIn: 'root',
 })
 export class I18nLoaderService {
-  constructor(private readonly scriptLoaderService: ScriptLoaderService) {}
+  constructor(
+    private readonly scriptLoaderService: ScriptLoaderService,
+    private readonly i18nTranslationService: TranslocoService
+  ) {}
 
   public loadRemoteI18nData$(appLang: AppLang): Observable<AppLang> {
     // TODO: Handle errors
@@ -17,11 +21,8 @@ export class I18nLoaderService {
     }).pipe(map(() => appLang));
   }
 
-  private loadTranslations(appLang: AppLang): Observable<unknown> {
-    // TODO: Call Transloco
-    console.log('loading translations for: ', appLang);
-
-    return of(appLang);
+  private loadTranslations(appLang: AppLang): Observable<Translation> {
+    return this.i18nTranslationService.load(appLang);
   }
 
   private loadLocaleData(appLang: AppLang): Observable<unknown> {

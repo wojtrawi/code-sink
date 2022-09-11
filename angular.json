@@ -128,5 +128,6 @@
   },
   "cli": {
     "schematicCollections": ["@angular-eslint/schematics"]
-  }
+  },
+  "defaultProject": "code-sink"
 }

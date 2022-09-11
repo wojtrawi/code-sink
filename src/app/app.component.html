@@ -6,3 +6,8 @@
 <p>localeId {{ localeId }}</p>
 <button (click)="changeLocale()">change locale</button>
 <p>{{ date | date }}</p>
+
+<ng-container *transloco="let t">
+  <p>{{ t('HELLO') }}</p>
+  <p>{{ t('GREETING') }}</p>
+</ng-container>
