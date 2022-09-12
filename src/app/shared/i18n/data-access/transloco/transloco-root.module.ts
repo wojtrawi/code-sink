@@ -5,8 +5,9 @@ import { provideTranslocoLoader } from './transloco-http-loader.service';
 import { provideTranslocoConfig } from './transloco-config.provider';
 
 @NgModule({
-  exports: [TranslocoModule, TranslocoLocaleModule],
+  exports: [TranslocoModule],
   imports: [
+    // TranslocoModule,
     TranslocoLocaleModule.forRoot({
       langToLocaleMapping: {
         en: 'en-US',

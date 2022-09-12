@@ -3,12 +3,6 @@
 <button (click)="setCookie()">Set cookie</button>
 <hr />
 
-<p>localeId {{ localeId }}</p>
-<button (click)="changeLocale()">change locale</button>
-<p>{{ date | date }}</p>
-<p>{{ date | translocoDate: { dateStyle: 'medium', timeStyle: 'medium' } }}</p>
-
-<ng-container *transloco="let t">
-  <p>{{ t('HELLO') }}</p>
-  <p>{{ t('GREETING') }}</p>
-</ng-container>
+<main>
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,44 @@
+<h1>i18n-shell works!</h1>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="one">One</a>
+    </li>
+    <li>
+      <a routerLink="two">Two</a>
+    </li>
+  </ul>
+</nav>
+<section>
+  <h2>Language</h2>
+  <p>LOCALE_ID: {{ LOCALE_ID }}</p>
+  <label *ngFor="let lang of availableLangs">
+    <input
+      type="radio"
+      name="lang"
+      [value]="lang"
+      [checked]="lang === activeLang"
+      (change)="changeAppLang(lang)"
+    />
+    <span>{{ lang }}</span>
+  </label>
+</section>
+<section>
+  <h2>Date</h2>
+  <p>using Angular Date pipe</p>
+  <p>{{ today | date }}</p>
+  <p>using Transloco Date pipe</p>
+  <p>
+    {{ today | translocoDate: { dateStyle: 'medium', timeStyle: 'medium' } }}
+  </p>
+</section>
+<section>
+  <h2>Translations</h2>
+  <ng-container *transloco="let t">
+    <p>{{ t('WELCOME') }}</p>
+    <p>{{ t('GREETING', {username}) }}</p>
+  </ng-container>
+</section>
+<section>
+  <router-outlet></router-outlet>
+</section>

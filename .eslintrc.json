@@ -35,7 +35,6 @@
             "style": "kebab-case"
           }
         ],
-        "@angular-eslint/prefer-on-push-component-change-detection": "warn",
         "no-magic-numbers": "error"
       }
     },

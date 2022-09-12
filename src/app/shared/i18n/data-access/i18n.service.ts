@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { TranslocoService } from '@ngneat/transloco';
+import {
+  AvailableLangs,
+  LangDefinition,
+  TranslocoService,
+} from '@ngneat/transloco';
 import { Observable, tap } from 'rxjs';
 import { UserPreferencesService } from '../../user-preferences/data-access';
 import { I18nInitializerService } from './i18n-initializer.service';
@@ -17,8 +21,12 @@ export class I18nService {
     private readonly i18nTranslationService: TranslocoService
   ) {}
 
-  public get currentLang(): AppLang {
+  public getActiveLang(): AppLang {
     return this.i18nTranslationService.getActiveLang() as AppLang;
+  }
+
+  public getAvailableLangs(): AvailableLangs {
+    return this.i18nTranslationService.getAvailableLangs();
   }
 
   public changeLang(appLang: AppLang): Observable<unknown> | void {
